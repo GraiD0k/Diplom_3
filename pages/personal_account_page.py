@@ -9,7 +9,6 @@ class PersonalAccountPage(BasePage):
     def click_personal_account(self):
         self.wait_for_load_element(BaseLocators.BUTTON_PERSONAL_ACCOUNT)
         self.find_element(BaseLocators.BUTTON_PERSONAL_ACCOUNT).click()
-        #self.wait_for_load_element(BaseLocators.FIELD_EMAIL)
 
     @allure.step('Вводим email')
     def send_email(self):

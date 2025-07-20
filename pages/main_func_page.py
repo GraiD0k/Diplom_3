@@ -15,7 +15,7 @@ class MainFuncPage(BasePage):
 
     @allure.step('Нажимаем на кнопку Лента Заказа')
     def click_order_feed(self):
-        time.sleep(3)
+        self.wait_for_load_element(MainFuncLocators.BUTTON_ORDER_FEED)
         self.wait_for_clickable_element(MainFuncLocators.BUTTON_ORDER_FEED)
         self.find_element(MainFuncLocators.BUTTON_ORDER_FEED).click()
         self.wait_for_load_element(BaseLocators.BUTTON_PERSONAL_ACCOUNT)
@@ -45,7 +45,6 @@ class MainFuncPage(BasePage):
 
     @allure.step('Получаем количество булок')
     def get_count_bun(self):
-        time.sleep(2)
         return self.get_text_for_element(MainFuncLocators.TEXT_COUNT_BUN)
 
     @allure.step('Нажимаем на кнопку оформить заказ')

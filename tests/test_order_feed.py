@@ -12,7 +12,7 @@ class TestOrderFeed:
         main_func.click_order_feed()
         order_feed = OrderFeedPage(driver)
         order_feed.click_order()
-        assert order_feed.order_modal_is_displayed() == True
+        assert order_feed.order_modal_is_displayed()
 
     @allure.title('Заказы пользователя из раздела «История заказов» отображаются на странице «Лента заказов»')
     def test_order_from_history_displayed_order_list(self, driver):
